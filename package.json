@@ -1,0 +1,10 @@
+{
+  "name": "tasknow",
+  "version": "1.0.0",
+  "description": "WDD330 Final Project - Luis Chavez",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Luis Chavez <luisernestochavezleal@gmail.com>"
+}
