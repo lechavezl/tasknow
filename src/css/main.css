@@ -1,0 +1,91 @@
+:root {
+    --primarlyBlue: #195ABE;
+    --secondaryBlue: #3090E7;
+    --pictonBlue: #4DB3F1;
+    --white: #FFFFFF;
+    --lightDark: #2E2F38;
+    --headersFont: 'Lato', 'Times New Roman' ,sans-serif;
+    --paragraphFont: 'Inter', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headersFont);
+}
+
+p {
+    font-family: var(--paragraphFont)
+}
+
+.login-main {
+    text-align: center;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 0 0 20px 0;
+}
+
+.login-container {
+    margin: 0 auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 3rem;
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+    border: 1px groove;
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow:  20px 20px 60px #bebebe, -20px -20px 60px #bebebe;
+}
+
+.login-form h1 {
+    background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue), var(--white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-form label {
+    font-family: var(--paragraphFont);
+}
+
+.input {
+    height: 2.7rem;
+    border: 1px solid var(--lightDark);
+    border-radius: 4px;
+    margin: 10px 0 30px 0;
+    font-size: 1rem;
+    font-family: var(--paragraphFont);
+    background-color: lightgray;
+}
+
+.submit-button {
+    cursor: pointer;
+    width: 200px;
+    height: 2.7rem;
+    color: var(--white);
+    background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+    border: 1px solid var(--lightDark);
+    border-radius: 4px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.login-form p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-form p > a {
+    text-decoration: none;
+    background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--primarlyBlue), var(--secondaryBlue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
