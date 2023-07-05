@@ -82,10 +82,33 @@ main h1 {
     text-align: center;
 }
 
-.login-form p > a {
-    text-decoration: none;
+.login-form p > span {
+    /* text-decoration: none; */
     background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--primarlyBlue), var(--secondaryBlue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    cursor: pointer;
 }
+
+.signup-container {
+    display: none;
+}
+
+.fade-in-out {
+    animation: fadeInOut 0.3s ease-in-out;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }

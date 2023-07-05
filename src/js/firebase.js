@@ -39,21 +39,3 @@ onAuthStateChanged(auth, user => {
     }
 });
 
-
-// Retrieve citys of the database
-async function loadCity(name) {
-    const cityDoc = doc(db, `cities/${name}`);
-    const snapshot = await getDoc(cityDoc);
-    return {
-      id: snapshot.id,
-      ...snapshot.data(),
-    };
-  }
-
-
-// Cool stuff!!
-
-const helloNode = document.createElement("h2");
-helloNode.textContent = "Hello World!"
-
-document.getElementById("root").appendChild(helloNode);

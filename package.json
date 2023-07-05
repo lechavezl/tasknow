@@ -4,7 +4,14 @@
   "description": "WDD330 Final Project - Luis Chavez",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "webpack --mode=development"
   },
-  "author": "Luis Chavez <luisernestochavezleal@gmail.com>"
+  "author": "Luis Chavez <luisernestochavezleal@gmail.com>",
+  "dependencies": {
+    "firebase": "^9.23.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
 }
