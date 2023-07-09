@@ -8,6 +8,11 @@
     --paragraphFont: 'Inter', Arial, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headersFont);
 }
@@ -16,8 +21,72 @@ p {
     font-family: var(--paragraphFont)
 }
 
+/* ---------- Header styles ---------- */
+
+nav {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    border-bottom: 1px solid var(--lightDark);
+    margin-bottom: 40px;
+    background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+    /* padding: 20px 0; */
+    /* background-color: lightgray; */
+    height: 75px;
+}
+
+.logo {
+    /* background-color: aquamarine; */
+    /* height: 75px; */
+    /* width: 100%; */
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    margin: 0;
+}
+
+.logo img {
+    height: 75px;
+    width: 100%;
+}
+
+.nav-buttons {
+    /* background-color: var(--primarlyBlue); */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 75px;
+    /* padding: 0; */
+}
+
+.nav-buttons div {
+    margin: 0 5px;
+}
+
+.nav-buttons div a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav-buttons div:nth-child(1), div:nth-child(3) {
+    cursor: pointer;
+    border: 1px solid #000000;
+    padding: 8px;
+    background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+}
+
+.vertical-line {
+    background-color: var(--lightDark);
+    width: 1px;
+    height: 65%;
+    /* padding: 0; */
+    /* margin: auto 0; */
+}
+
+/* ---------- End of Header styles ---------- */
+
 .login-main {
     text-align: center;
+    /* padding: 80px 0; */
 }
 
 main h1 {
@@ -112,3 +181,41 @@ main h1 {
         opacity: 1;
     }
   }
+
+/* ---------- Footer styles ---------- */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #000000;
+    color: var(--white);
+    margin-top: 40px;
+    background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+}
+
+footer img {
+    width: 120.531px;
+    height: 75px;
+}
+
+footer p:nth-child(3) {
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.social-media {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 50px;
+    height: 50px;
+    margin: auto 5px;
+}
+
+/* ---------- End of Footer styles ---------- */
