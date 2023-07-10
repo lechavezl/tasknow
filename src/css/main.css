@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--headersFont);
 }
 
-p {
+p, a {
     font-family: var(--paragraphFont)
 }
 
@@ -27,11 +27,12 @@ nav {
     display: grid;
     grid-template-columns: .1fr 1fr;
     border-bottom: 1px solid var(--lightDark);
+    padding: 0 0 10px 0;
     margin-bottom: 40px;
-    background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+    height: 75px;
+    /* background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue)); */
     /* padding: 20px 0; */
     /* background-color: lightgray; */
-    height: 75px;
 }
 
 .logo {
@@ -60,6 +61,7 @@ nav {
 
 .nav-buttons div {
     margin: 0 5px;
+    border-radius: 4px;
 }
 
 .nav-buttons div a {
@@ -182,6 +184,60 @@ main h1 {
     }
   }
 
+.login-container::before,
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 80px;
+  height: 400px;
+  background-color: var(--primarlyBlue);
+  opacity: 0.7;
+  z-index: -1;
+  /* transform: rotate(60deg); */
+  animation: float-bottom-left 3s ease-in-out infinite;
+}
+
+.login-container::after,
+.signup-container::after {
+  content: '';
+  position: absolute;
+  top: 28%;
+  left: 70%;
+  width: 80px;
+  height: 400px;
+  background-color: var(--secondaryBlue);
+  opacity: 0.7;
+  z-index: -1;
+  animation: float-top-right 3s ease-in-out infinite;
+  /* transform: rotate(60deg); */
+}
+
+@keyframes float-top-right {
+    0% {
+      transform: translate(0, 0) rotate(45deg);
+    }
+    50% {
+      transform: translate(100px, -100px) rotate(45deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(45deg);
+    }
+}
+
+@keyframes float-bottom-left {
+    0% {
+      transform: translate(0, 0) rotate(45deg);
+    }
+    50% {
+      transform: translate(-100px, 100px) rotate(45deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(45deg);
+    }
+}
+
 /* ---------- Footer styles ---------- */
 
 footer {
@@ -191,7 +247,8 @@ footer {
     border-top: 1px solid #000000;
     color: var(--white);
     margin-top: 40px;
-    background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+    background-color: #bdbdbd;
+    /* background: linear-gradient(175deg, var(--pictonBlue), var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue)); */
 }
 
 footer img {
@@ -199,12 +256,10 @@ footer img {
     height: 75px;
 }
 
-footer p:nth-child(3) {
+footer a {
     border-bottom: 1px solid;
     cursor: pointer;
-}
-
-footer a {
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -219,3 +274,10 @@ footer a {
 }
 
 /* ---------- End of Footer styles ---------- */
+
+
+/* ---------- Medium View ---------- */
+
+@media only screen and (min-width: 40rem) {
+
+}
