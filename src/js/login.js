@@ -38,7 +38,7 @@ function signUpTemplate() {
             <input type="password" name="password" id="SignUppassword" required class="input">
 
             <input type="submit" name="submit" value="SIGN UP" class="submit-button" id="logIn">
-            <p>Do you already have an account? <span id="signInButton">Sign In</span></p>
+            <p>Do you have an account? <span id="signInButton">Sign In</span></p>
          </form>`;
 }
 
