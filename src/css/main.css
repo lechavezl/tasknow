@@ -22,7 +22,7 @@ p, a {
     font-family: var(--paragraphFont)
 }
 
-/* ---------- Header styles ---------- */
+/* ?---------- Header styles ---------- */
 
 nav {
     display: block;
@@ -66,7 +66,7 @@ nav {
     background: linear-gradient(to right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
 }
 
-/* ---------- End of Header styles ---------- */
+/* ?---------- End of Header styles ---------- */
 
 .login-main {
     text-align: center;
@@ -165,7 +165,7 @@ main h1 {
     }
   }
 
-/* ---------- Footer styles ---------- */
+/* ?---------- Footer styles ---------- */
 
 footer {
     display: flex;
@@ -204,10 +204,10 @@ footer a {
     margin: auto 5px;
 }
 
-/* ---------- End of Footer styles ---------- */
+/* ?---------- End of Footer styles ---------- */
 
 
-/* ---------- TaskNow App styles ---------- */
+/* *---------- TaskNow App styles ---------- */
 
 .htmltag-taskNow, .tasknow-body {
     height: 100%;
@@ -317,7 +317,7 @@ display: none;
     left: 80%;
 }
 
-/* ---------- End TaskNow App styles ---------- */
+/* *---------- End TaskNow App styles ---------- */
 
 
 /* ---------- Medium View ---------- */
