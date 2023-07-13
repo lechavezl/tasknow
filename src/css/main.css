@@ -245,7 +245,7 @@ footer a {
     height: 50px;
 }
 
-.vertical-line {
+.app-vertical-line {
     grid-column: 5/6;
     height: 55px;
     width: 1.2px;
@@ -295,13 +295,72 @@ border: 5px solid white;
 }
 
 .sidebar-content {
-display: none;
+        display: none;
+        color: var(--white);
+        background: linear-gradient(to bottom right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+        width: 20%;
+        height: 100%;
+        padding: 15px;
 }
 
 .main-background {
+    overflow: scroll;
     background: var(--gradientColor);
     height: 100%;
 }
+
+.tasks {
+    display: flex;
+    gap: 10px;
+    border: 3px solid #c1c1c1;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 6px;
+    margin: 15px 25px;
+    /* width: 80%; */
+}
+
+.check-box {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    align-self: center;
+}
+
+.check-box::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primarlyBlue);
+    top: 4px;
+    left: 4px;
+    border-radius: 50px;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.check-box:checked::before {
+    transform: scale(1);
+}
+
+/* .check-box::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+    } */
 
 .task-button {
     position: fixed;
@@ -315,6 +374,46 @@ display: none;
     border-radius: 50%;
     bottom: 5%;
     left: 80%;
+}
+
+.add-task {
+    box-sizing: border-box;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    justify-items: center;
+}
+
+.add-task-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EDEEF0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+#userTask {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    /* background-color: #F4F4F4; */
+}
+
+.add-task-button {
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 16px 50px;
+    background: var(--primarlyBlue);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 40px;
+
 }
 
 /* *---------- End TaskNow App styles ---------- */
@@ -435,9 +534,97 @@ display: none;
     
     /** ---- TaskNow App styles ---- **/
 
+    .app-nav {
+        display: grid;
+        grid-template-columns: 0.1fr 0.2fr 2fr 0.2fr 0.2fr 0.2fr;
+        justify-items: center;
+    }
+
+    .app-button {
+        grid-column: 1/2;
+    }
+
+    .app-logo {
+    grid-column: 2/3;
+    }
+
+    .toggle-container {
+    grid-column: 4/5;
+    }
+
     .task-button {
         left: 85%;
     }
+
+    .tasknow-main {
+        display: flex;
+    }
+
+    .main-background {
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .main-background h2 {
+        margin-bottom: 30px;
+    }
+
+
+    .sidebar-content {
+        display: block;
+        background-color: #F4F4F4;
+        width: 30%;
+        border-left: 1px solid #000000;
+        padding: 20px;
+        /* height: 100%; */
+        /* padding: 15px; */
+    }
+
+    /* .hide-sidebar {
+        transform: ;
+    } */
+
+    
+
+    .tasks {
+        display: flex;
+        gap: 10px;
+        border: 3px solid #c1c1c1;
+        background-color: var(--white);
+        border-radius: 20px;
+        padding: 6px;
+        margin: 15px 25px;
+        /* width: 80%; */
+    }
+    
+    /* .check-box {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        align-self: center;
+    } */
+
+    /* .check-box::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .check-box:checked::before {
+        transform: scale(1);
+    } */
 
     /* *---------- End TaskNow App styles ----------* */
 
@@ -469,6 +656,13 @@ display: none;
 
 
     /* *---------- TaskNow App styles ----------* */
+
+    /* .app-nav {
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        justify-items: center;
+    } */
+
 
     .task-button {
         bottom: 8%;
