@@ -210,9 +210,8 @@ footer a {
 /* *---------- TaskNow App styles ---------- */
 
 .htmltag-taskNow, .tasknow-body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .app-nav {
@@ -291,22 +290,33 @@ border: 5px solid white;
 }
 
 .tasknow-main {
+    /* position: relative; */
     height: 100%;
 }
 
 .sidebar-content {
         display: none;
+        box-sizing: border-box;
         color: var(--white);
-        background: linear-gradient(to bottom right, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
+        background: linear-gradient(to left, var(--primarlyBlue), var(--secondaryBlue), var(--pictonBlue));
         width: 20%;
         height: 100%;
-        padding: 15px;
+        padding: 20px;
+}
+
+.sidebar-menus {
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
 }
 
 .main-background {
-    overflow: scroll;
+    position: relative;
+    /* overflow: scroll; */
     background: var(--gradientColor);
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 .tasks {
@@ -368,7 +378,7 @@ border: 5px solid white;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: lightpink;
+    background: var(--white);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -377,6 +387,10 @@ border: 5px solid white;
 }
 
 .add-task {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     width: 500px;
     height: 200px;
@@ -561,8 +575,8 @@ border: 5px solid white;
     }
 
     .main-background {
-        width: 100%;
-        padding: 15px;
+        /* width: 100%; */
+        /* padding: 15px; */
         margin: 0;
     }
 
@@ -573,19 +587,14 @@ border: 5px solid white;
 
     .sidebar-content {
         display: block;
-        background-color: #F4F4F4;
+        /* background-color: #F4F4F4; */
         width: 30%;
-        border-left: 1px solid #000000;
-        padding: 20px;
-        /* height: 100%; */
-        /* padding: 15px; */
+        border-right: 1px solid #000000;
     }
 
     /* .hide-sidebar {
         transform: ;
     } */
-
-    
 
     .tasks {
         display: flex;
