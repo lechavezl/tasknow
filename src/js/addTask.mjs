@@ -48,25 +48,51 @@ function createTask() {
         //Append the element to the main-background
         mainBackground.appendChild(taskDiv);
 
-        const addTask = document.querySelector(".add-task-button");
-
-        addTask.addEventListener("click", function() {
-            const taskText = document.querySelector("#userTask").value;
-            console.log(taskText);
-
-            //Create task container
-            const container = document.createElement("div");
-            container.classList.add("tasks");
-
-            //Create the task check
-            const checkTask = document.crea
-        });
+        addTaskBtn();
     });
 }
 
-function taskTemplate(task) {
-    return `<div class="tasks">
-                <input type="checkbox" name="" id="" class="check-box">
-                <p class="task-name task-checked">${task}</p>
-            </div>`
+function addTaskBtn() {
+    //Take the button element to set the addEventListener
+    const addTaskBtn = document.querySelector(".add-task-button");
+    addTaskBtn.addEventListener("click", function() {
+    
+    //Take the mainBackground
+    const mainBackground = document.querySelector(".main-background");
+    const taskText = document.querySelector("#userTask").value;
+
+    //Create task container
+    const container = document.createElement("div");
+    container.classList.add("tasks");
+
+    //Create the task check
+    const checkTask = document.createElement("input");
+    checkTask.type = "checkbox";
+    checkTask.name = "checkbox";
+    checkTask.classList.add("check-box");
+
+    //Create the p element where will we show the task
+    const taskName = document.createElement("p");
+    taskName.classList.add("task-name");
+    taskName.classList.add("task-checked");
+    taskName.innerHTML = taskText;
+    
+    //Append the elements into the taks div
+    container.appendChild(checkTask);
+    container.appendChild(taskName);
+    
+    //Append the new task in the mainBackground
+    mainBackground.appendChild(container);
+    
+    //Hide the add task button (function);
+    const addTaskContainer = document.querySelector(".add-task");
+    mainBackground.removeChild(addTaskContainer);
+    });
 }
+
+// function taskTemplate(task) {
+//     return `<div class="tasks">
+//                 <input type="checkbox" name="" id="" class="check-box">
+//                 <p class="task-name task-checked">${task}</p>
+//             </div>`
+// }
