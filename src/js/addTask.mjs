@@ -235,3 +235,40 @@ function removeTask() {
       });
     });
 }
+
+function sortTasksByImportance(importance) {
+    const sortedTasks = allTasks.sort((task1, task2) => {
+      if (task1.importance === importance && task2.importance !== importance) {
+        return -1; // task1 tiene mayor importancia, se coloca antes
+      } else if (task1.importance !== importance && task2.importance === importance) {
+        return 1; // task2 tiene mayor importancia, se coloca antes
+      } else if (task1.importance === "normal" && task2.importance !== "normal") {
+        return 1; // tareas normales se colocan al final
+      } else if (task1.importance !== "normal" && task2.importance === "normal") {
+        return -1; // tareas normales se colocan al final
+      } else {
+        return 0; // misma importancia, no se cambia el orden
+      }
+    });
+  
+    allTasks = sortedTasks;
+    setLocalStorage("tasks", sortedTasks);
+    displayTasks(sortedTasks);
+}
+  
+  // Event listeners para los botones de clasificación
+  
+const sortUrgentButton = document.querySelector(".sort-urgent");
+  sortUrgentButton.addEventListener("click", function() {
+    sortTasksByImportance("urgent");
+});
+  
+const sortImportantButton = document.querySelector(".sort-important");
+  sortImportantButton.addEventListener("click", function() {
+    sortTasksByImportance("important");
+});
+  
+const sortNormalButton = document.querySelector(".sort-normal");
+  sortNormalButton.addEventListener("click", function() {
+    sortTasksByImportance("normal");
+});

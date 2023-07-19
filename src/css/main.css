@@ -304,9 +304,20 @@ border: 5px solid white;
     padding: 20px;
 }
 
-.sidebar-menus {
+.sort-container h3 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.sidebar-sort-btn {
     border-bottom: 1px solid #000000;
     cursor: pointer;
+    padding: 1px;
+}
+
+.sidebar-sort-btn:hover {
+    background-color: var(--secondaryBlue);
 }
 
 .main-background {
@@ -442,10 +453,10 @@ border: 5px solid white;
 }
 
 .add-task {
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     width: 350px;
     height: 150px;
@@ -504,6 +515,14 @@ border: 5px solid white;
 
 .task-line-through {
     background-color: #757575;
+}
+
+#darkMode {
+    background: #1E2341;
+}
+
+#darkModeTasks {
+    background-color: #FFFFFFC2;
 }
 
 /* *---------- End TaskNow App styles ---------- */
