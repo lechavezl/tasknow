@@ -11,6 +11,48 @@ export function setLocalStorage(key, data) {
     localStorage.setItem(key, dataS );
 }
 
+export function setClick(selector, callback) {
+    qs(selector).addEventListener("touchend", (event) => {
+      event.preventDefault();
+      callback();
+    });
+    qs(selector).addEventListener("click", callback);
+}
+  
+export function getParams(param) {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const product = urlParams.get(param)
+    return product;
+}
+  
+export function renderListWithTemplate(
+    templateFn,
+    parentElement,
+    list,
+    position = "afterbegin",
+    clear = true
+  ) {
+    if (clear) {
+      parentElement.innerHTML = "";
+    }
+    const htmlString = list.map(templateFn);
+    parentElement.insertAdjacentHTML(position, htmlString.join(""));
+}
+  
+export async function renderWithTemplate(templateFn, parentElement, data, callback, position="afterbegin", clear=true) {
+    
+    if (clear) {
+        parentElement.innerHTML = "";
+    }
+    
+    const htmlString = await templateFn(data);
+    parentElement.insertAdjacentHTML(position, htmlString);
+    if(callback) {
+        callback(data);
+    }
+}
+
 function loadTemplate(path) {
 
     return async function () {
